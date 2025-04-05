@@ -33,8 +33,9 @@
 
 | Data       | Versão | Descrição                         |
 |------------|--------|-----------------------------------|
-| 15/08/2023 | 1.0    | Dataset original baixado da PRF   |
-| 20/08/2023 | 1.1    | Remoção de colunas não utilizadas |
+| 15/03/2025 | 1.0    | Dataset original baixado da PRF   |
+| 20/03/2025 | 1.1    | Remoção de colunas não utilizadas |
+| 04/04/2025 | 2.0   | Novo schema de datas; Migração para Delta Lake |
 
 
 
