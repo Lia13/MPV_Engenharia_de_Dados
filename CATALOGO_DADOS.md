@@ -60,9 +60,47 @@ Permitido uso para fins acadêmicos e de pesquisa
 | `dim_pavimento` | `COD_PAVIMENTO` + `PAVIMENTO` | Mapeamento direto |
 | `dim_regional` | `COD_REGIONAL` + `DESC_REGIONAL` | Limpeza de categorias |
 
+```mermaid
 erDiagram
-  fato_acidentes ||--o{ dim_tempo : tempo
-  fato_acidentes ||--|{ dim_pavimento : pavimento
-  fato_acidentes ||--|{ dim_regional : local
-  fato_acidentes ||--|{ dim_tipo_acidente : tipo
+    fato_acidentes {
+        string id_boletim PK
+        bigint id_tempo FK
+        int id_pavimento FK
+        int id_regional FK
+        string id_tipo_acidente FK
+        int velocidade_permitida
+        boolean fatal
+        double coordenada_x
+        double coordenada_y
+    }
+    
+    dim_tempo {
+        bigint id_tempo PK
+        int ano
+        int mes
+        int dia
+        int hora
+        int dia_semana
+        string tipo_dia
+    }
+    
+    dim_pavimento {
+        int id_pavimento PK
+        string descricao
+    }
+    
+    dim_regional {
+        int id_regional PK
+        string nome_regional
+    }
+    
+    dim_tipo_acidente {
+        string codigo_tipo PK
+        string tipo_acidente
+    }
 
+    fato_acidentes }|--|| dim_tempo : "Tempo (hora)"
+    fato_acidentes }|--|| dim_pavimento : "Pavimento"
+    fato_acidentes }|--|| dim_regional : "Regional"
+    fato_acidentes }|--|| dim_tipo_acidente : "Tipo Acidente"
+```
