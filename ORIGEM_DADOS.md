@@ -29,6 +29,37 @@
 - Valores zero em `VELOCIDADE_PERMITIDA` representam dados não informados
 - Caracteres especiais em algumas colunas de descrição
 
+## Pipeline de Carga - Acidentes PRF 2021
+
+### Fluxo de Carga
+```mermaid
+graph LR
+    A[DF Transformado] --> B[Adicionar Metadados]
+    B --> C[Validar Schema]
+    C --> D[Escrever no Delta Lake]
+    D --> E[Registrar Log]
+```
+
+### Tabelas Carregadas
+| Tabela | Formato | Modo | Registros |
+|--------|---------|------|----------|
+| `dim_tempo` | Delta | overwrite | `dim_tempo.count()` |
+| `fato_acidentes` | Delta | append | `fato_acidentes.count()` |
+
+### Metadados Incluídos
+```json
+{
+  "pipeline_name": "carga_acidentes_prf",
+  "source": "PRF",
+  "ingestion_time": "2023-08-28T14:30:00Z"
+}
+```
+
+### Check-list de Qualidade
+- [x] Verificação de schema antes da carga
+- [x] Registro de metadados
+- [x] Log de execução
+
 - ## Histórico de Versões
 
 | Data       | Versão | Descrição                         |
