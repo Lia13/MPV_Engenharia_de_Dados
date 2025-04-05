@@ -51,3 +51,18 @@ Permitido uso para fins acadêmicos e de pesquisa
 - **Solução**: Conversão com `to_timestamp()`
 - **Problema**: Campos com encoding incorreto
 - **Solução**: Ajuste com `ISO-8859-1`
+
+## 5. Origem das Dimensões
+
+| Dimensão | Fonte Original | Transformação |
+|----------|----------------|---------------|
+| `dim_tempo` | `DATA_HORA_BOLETIM` | Extração de componentes de data |
+| `dim_pavimento` | `COD_PAVIMENTO` + `PAVIMENTO` | Mapeamento direto |
+| `dim_regional` | `COD_REGIONAL` + `DESC_REGIONAL` | Limpeza de categorias |
+
+erDiagram
+  fato_acidentes ||--o{ dim_tempo : tempo
+  fato_acidentes ||--|{ dim_pavimento : pavimento
+  fato_acidentes ||--|{ dim_regional : local
+  fato_acidentes ||--|{ dim_tipo_acidente : tipo
+
