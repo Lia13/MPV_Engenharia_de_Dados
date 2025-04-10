@@ -43,27 +43,6 @@ graph LR
 
 ## 🚀 Como Executar
 
-1. **Preparação do Ambiente**:
-```python
-# Carregar dados originais
-df = spark.read.csv("/FileStore/tables/si_bol_2021.csv", 
-                   header=True, sep=";", inferSchema=True)
-```
-
-2. **Transformações Principais**:
-```python
-# Ver notebook completo em notebooks/transformacoes_principais.py
-```
-
-3. **Análises Chave**:
-```sql
--- Exemplo: Acidentes por tipo
-SELECT descricao_tipo_acidente, COUNT(*) as total
-FROM acidentes_2021
-GROUP BY descricao_tipo_acidente
-ORDER BY total DESC
-```
-
 ## 📊 Resultados Esperados
 
 - Identificação de **horários e trechos críticos**
@@ -73,7 +52,7 @@ ORDER BY total DESC
 
 ## 📝 Licença e Atribuição
 
-- **Fonte dos Dados**: [Polícia Rodoviária Federal](https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-acidentes)
+- **Fonte dos Dados**: [Polícia Rodoviária Federal](https://dados.gov.br/dados/conjuntos-dados/relacao-de-ocorrencias-de-acidentes-de-transito-com-vitima)
 - **Licença**: [Dados Abertos](http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm)
 - **Citação**: "Dados de acidentes rodoviários 2021 - PRF Brasil"
 
