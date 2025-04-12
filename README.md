@@ -37,11 +37,10 @@ graph LR
 | `acidentes_2021` | View | Camada simplificada para análise |
 
 ### Arquivos Importantes
-- `DICIONARIO_DADOS.md`: Catálogo completo de campos
-- `ETAPAS_TRANSFORMACAO.md`: Fluxo de tratamento dos dados
-- `ANALISE_QUALIDADE.md`: Métricas de integridade dos dados
+- `CATALOGO_DADOS.md`: Catálogo completo de campos
+- `EVIDENCIAS.md`: Capturas dos campos visuais fora do notebook.
+- `MPV engenharia de Dados.ipynb`: Notebook com todas as etapas e documentação.
 
-## 🚀 Como Executar
 
 ## 📊 Resultados Esperados
 
@@ -52,7 +51,7 @@ graph LR
 
 ## 📝 Licença e Atribuição
 
-- **Fonte dos Dados**: [Polícia Rodoviária Federal](https://dados.gov.br/dados/conjuntos-dados/relacao-de-ocorrencias-de-acidentes-de-transito-com-vitima)
+- **Fonte dos Dados**: [Dados Gov - Relação de ocorrências de acidentes de trânsito com vítima]([https://dados.gov.br/dados/conjuntos-dados/relacao-de-ocorrencias-de-acidentes-de-transito-com-vitima](https://dados.gov.br/dados/conjuntos-dados/relacao-de-ocorrencias-de-acidentes-de-transito-com-vitima))
 - **Licença**: [Dados Abertos](http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm)
 - **Citação**: "Dados de acidentes rodoviários 2021 - PRF Brasil"
 
