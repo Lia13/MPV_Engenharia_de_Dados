@@ -57,9 +57,9 @@ Licença: Open Data Commons Open Database License (ODbL)
 |------------------|----------------------------------------|----------------------------------------|
 | `dim_tempo`      | `DATA_HORA_BOLETIM`                    | Extração de componentes de data (ano, mês, dia, hora, dia da semana) |
 | `dim_pavimento`  | `COD_PAVIMENTO` + `PAVIMENTO`          | Mapeamento direto e padronização de categorias |
-| `dim_regional`   | `COD_REGIONAL` + `DESC_REGIONAL`       | Limpeza de categorias e tratamento de inconsistências |
-| `dim_clima`      | `CONDICAO_METEOROLOGICA`               | Tratamento de valores nulos e padronização |
-| `dim_tipo_acidente` | `TIPO_ACIDENTE`                     | Padronização de nomenclaturas |
+| `dim_regional`   | `COD_REGIONAL` + `DESC_REGIONAL`       | Mapeamento direto + Remoção de duplicatas |
+| `dim_clima`      | `COD_TEMPO` + `DESC_TEMPO`               | Mapeamento direto + Remoção de duplicatas |
+| `dim_tipo_acidente` | `TIPO_ACIDENTE` + `DESC_TIPO_ACIDENTE`      | Mapeamento direto + Remoção de duplicatas |
 
 
 ## 6. Modelagem
