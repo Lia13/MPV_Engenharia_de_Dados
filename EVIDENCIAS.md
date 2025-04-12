@@ -19,7 +19,8 @@ Este documento apresenta as evidências visuais da execução das etapas do trab
 ## 2. Resultados das Análises do MVP
 
 ### 2.1 Demonstração em Vídeo
-[Assista à análise dos resultados](analises_video.webm)  
+[![Assista à demonstração das análises](https://img.youtube.com/vi/jgs27aK_iU0/0.jpg)](https://youtu.be/jgs27aK_iU0)
+
 **Descrição**: Este vídeo apresenta a execução das análises que respondem às perguntas-chave definidas no problema do MVP. O conteúdo mostra:
 - Processamento dos dados
 - Aplicação das transformações necessárias
